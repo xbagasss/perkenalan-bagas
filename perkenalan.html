@@ -84,7 +84,7 @@
         .education p {
             margin: 5px 0;
         }
-        .hobbies, .contact {
+        .hobbies, .contact, .kuliah {
             text-align: left;
             margin: 20px 0;
         }
@@ -102,6 +102,23 @@
             cursor: pointer;
         }
         .hobbies li:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        .kuliah ul {
+            list-style: none;
+            padding: 0;
+        }
+        .kuliah li {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: background 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .kuliah li:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: scale(1.05);
         }
@@ -159,13 +176,15 @@
     <div class="stars"></div>
     <div class="container">
         <img src="https://i.pinimg.com/474x/3f/a7/19/3fa71949e415c51b7fdc83f2423342bf.jpg" alt="Foto Profil" class="profile-photo">
-        <h1 id="intro-heading">🌟 Halo! Saya Bagas 🌟</h1>
-        <p id="intro-age">👤 Usia: 18</p>
+        <h1 id="intro-heading"> Halo! Saya Bagas </h1>
+        <p id="intro-age">👤 Usia: 19</p>
+        <p id="intro-location">📍 Tempat Tinggal: Karawang</p>
         <p id="intro-profession">💼 Pekerjaan: Mahasiswa</p>
         <p id="intro-background">🌍 Latar Belakang: Saat ini saya sedang mempelajari Ilmu Komputer dan menjelajahi berbagai bidang di teknologi. Saya sangat bersemangat tentang coding dan inovasi.</p>
 
         <div class="education">
             <h2>Pendidikan</h2>
+            <p><strong>KULIAH:</strong> Universitas Buana Perjuangan Karawang</p>
             <p><strong>SMA:</strong> SMA Negeri 6 Karawang</p>
             <p><strong>SMP:</strong> SMP Negeri 5 Karawang</p>
             <p><strong>SD:</strong> SD Karawang Wetan 1</p>
@@ -173,8 +192,13 @@
         <div class="hobbies">
             <h2>🚀 Hobi Saya:</h2>
             <ul id="hobbies-list">
-                <!-- Hobbies will be populated here by JavaScript -->
             </ul>
+        </div>
+
+        <div class="kuliah">
+            <h2>🎓 Kuliah:</h2>
+            <p id="kuliah-info">Saya sedang menempuh pendidikan di Universitas Buana Perjuangan Karawang.</p><p id="kuliah-info">Saya mengambil jurusan Teknik Informatika dan memiliki minat dalam bidang teknologi.</p>
+                <a href="https://ubpkarawang.ac.id/" target="_blank" class="button">Website UBP</a>
         </div>
         
         <div class="contact">
@@ -187,6 +211,9 @@
                 <a href="https://www.instagram.com/xxbagasss/" target="_blank">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
                 </a>
+                <a href="https://ubpkarawang.ac.id/" target="_blank">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.s5LAvHgEqonX55ygXrIt9gAAAA?pid=Api&P=0&h=180" alt="UBP">
+                </a>
             </div>
         </div>
         
@@ -197,7 +224,7 @@
         const hobbies = [
             { name: "Coding 🔥", ref: "https://codingstudio.id/blog/coding-adalah-pengertian-dan-kegunaannya/" },
             { name: "Bermain Futsal ⚽", ref: "https://id.wikipedia.org/wiki/Sepak_bola" },
-            { name: "Mencari Cindo Islam  🚀", ref: "https://www.tiktok.com/@jessica_sica17/video/7212951335690374427" }
+            { name: "Mencari Cindo Islam  🚀", ref: "https://www.instagram.com/jkt48.erine?igsh=djNjdWl1cmZzcXdn" }
         ];
 
         function populateHobbies() {
@@ -210,7 +237,6 @@
             });
         }
 
-        // Initial population of hobbies
         populateHobbies();
     </script>
 </body>
